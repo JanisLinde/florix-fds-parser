@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="config.js"></script>
+        <script src="parser.js"></script>
+        <title>FDS Parser</title>
+    </head>
+    <body>
+        <div class="row">
+            <div class="column">
+                <h2>Input</h2>
+                <textarea id="fds-input"></textarea>
+            </div>
+            <div class="column middle">
+                <button id="btn-parse" onclick="parseFDS()">Parse</button>
+            </div>
+            <div class="column">
+                <h2>Output</h2>
+                <table  id="report-result">
+                    <tr>
+                        <td>Einsatznummer</td>
+                        <td id="report-nr"></td>
+                    </tr>    
+                    <tr>
+                        <td>Datum</td>
+                        <td id="report-date"></td>
+                    </tr>    
+                    <tr>
+                        <td>Uhrzeit</td>
+                        <td id="report-time"></td>
+                    </tr>
+                    <tr>
+                        <td>Stichwort</td>
+                        <td id="report-kind"></td>
+                    </tr>
+                    <tr>
+                        <td>Adresse</td>
+                        <td id="report-address"></td>
+                    </tr>
+                    <tr>
+                        <td>Eingesetze Kräfte</td>
+                        <td id="report-stations"></td>
+                    </tr>
+                    <tr>
+                        <td>Fahrzeuge</td>
+                        <td id="report-units"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>        
+    </body>
+</html>
