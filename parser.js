@@ -9,7 +9,7 @@ function getParamFromString(str) {
 
 function parseFDS() {
     const fdsData = document.getElementById("fds-input").value;
-    const fdsLines = fdsData.split(/\r?\n/)
+    const fdsLines = fdsData.split(/\r?\n/);
     for(let i = 0; i < fdsLines.length; i++) {
         if(compareString(fdsLines[i], "[FDS]")) {
             // console.log(getParamFromString(fdsLines[i + 1]));
@@ -67,7 +67,6 @@ function parseFDS() {
                 stationsStr += stations[s] + "\n";
             }
             document.getElementById("report-stations").innerText = stationsStr;
-
         } 
     }
 }
