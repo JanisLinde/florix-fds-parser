@@ -12,24 +12,26 @@
 
     "content_scripts" : [
         {
-            "matches" : ["<all_urls>"],
+            "matches" : ["*://*.zms-hessen.de/*"],
             "js" : ["zms-export.js"]
         }
+    ],
+
+    "background" : {
+        "scripts": [
+            "zms-daemon.js"
+        ]
+    },
+
+    "permissions" : [
+        "activeTab",
+        "contextMenus",
+        "storage"
     ],
 
     "browser_specific_settings" : {
         "gecko" : {
             "id" : "zms-export@linde.dev"
         }
-    },
-
-    "permissions" : [
-        "activeTab"
-    ],
-
-    "browser_action": {
-        "default_icon": "img/report-32.png",
-        "default_title": "ZMS-Export",
-        "default_popup": "popup/export.html"
     }
 }
