@@ -1,0 +1,35 @@
+{
+    "manifest_version" : 2,
+    "name" : "zms-export",
+    "version" : "0.1",
+
+    "description" : "Exports FDS data from ZMS to create reports easier.",
+
+    "icons" : {
+        "48" : "img/report-48.png",
+        "96" : "img/report-96.png"
+    },
+
+    "content_scripts" : [
+        {
+            "matches" : ["<all_urls>"],
+            "js" : ["zms-export.js"]
+        }
+    ],
+
+    "browser_specific_settings" : {
+        "gecko" : {
+            "id" : "zms-export@linde.dev"
+        }
+    },
+
+    "permissions" : [
+        "activeTab"
+    ],
+
+    "browser_action": {
+        "default_icon": "img/report-32.png",
+        "default_title": "ZMS-Export",
+        "default_popup": "popup/export.html"
+    }
+}
